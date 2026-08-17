@@ -4,7 +4,7 @@ forecasts, and rolling averages, ready to drop straight into a BI tool.
 
 Usage:
     python build_dashboard.py
-    """
+"""
 import os
 
 import pandas as pd
@@ -14,11 +14,11 @@ REPORT_DIR = "reports"
 
 
 def main():
-      df = pd.read_csv(DATA_PATH, parse_dates=["date"])
-      df["rolling_7d_avg"] = df["sales"].rolling(7).mean().round(1)
-      df["rolling_30d_avg"] = df["sales"].rolling(30).mean().round(1)
-      df["day_of_week"] = df["date"].dt.day_name()
-      df["month"] = df["date"].dt.to_period("M").astype(str)
+    df = pd.read_csv(DATA_PATH, parse_dates=["date"])
+    df["rolling_7d_avg"] = df["sales"].rolling(7).mean().round(1)
+    df["rolling_30d_avg"] = df["sales"].rolling(30).mean().round(1)
+    df["day_of_week"] = df["date"].dt.day_name()
+    df["month"] = df["date"].dt.to_period("M").astype(str)
 
     os.makedirs(REPORT_DIR, exist_ok=True)
     out_path = f"{REPORT_DIR}/bi_export.csv"
@@ -28,4 +28,4 @@ def main():
 
 
 if __name__ == "__main__":
-      main()
+    main()
