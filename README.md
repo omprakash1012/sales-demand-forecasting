@@ -22,6 +22,10 @@ Built a daily sales time series with trend, weekly/yearly seasonality, and promo
 
 Prophet improved forecast accuracy by roughly 54% versus the naive baseline on the 30-day holdout. Results are reproducible via `python forecast.py --horizon 30` on the included synthetic dataset.
 
+## Sample output
+
+Running `python forecast.py --horizon 30` writes a forecast comparison plot (actual vs. Prophet vs. ARIMA vs. naive baseline) plus `metrics.json` and `forecast_results.csv` to `reports/`, gitignored so it regenerates fresh each run.
+
 ## Project structure
 
 ```
