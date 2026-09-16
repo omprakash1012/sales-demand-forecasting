@@ -1,0 +1,39 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / distribution
+build/
+dist/
+*.egg-info/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated data & reports (recreated by generate_data.py / forecast.py / build_dashboard.py)
+data/
+reports/
+
+# Prophet / Stan build artifacts
+cmdstan/
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
