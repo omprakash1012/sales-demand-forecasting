@@ -9,6 +9,19 @@ np.random.seed(7)
 
 
 def generate_sales(start="2022-01-01", periods=1000):
+    """Generate a synthetic daily sales series with trend and seasonality.
+
+    Combines a linear trend, weekly and yearly sinusoidal seasonality,
+    Gaussian noise, and randomly placed promotional spikes into a single
+    demand signal.
+
+    Args:
+        start: First date in the generated series (YYYY-MM-DD).
+        periods: Number of daily rows to generate.
+
+    Returns:
+        DataFrame with "date", "sales", and "is_promo" columns.
+    """
     dates = pd.date_range(start=start, periods=periods, freq="D")
     t = np.arange(periods)
 
