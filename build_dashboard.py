@@ -14,6 +14,12 @@ REPORT_DIR = "reports"
 
 
 def main():
+    """Build a BI-ready CSV export from the generated daily sales data.
+
+    Reads the daily sales CSV, adds 7-day and 30-day rolling averages plus
+    day-of-week and month columns, and writes the result to
+    reports/bi_export.csv for import into Power BI / Tableau.
+    """
     df = pd.read_csv(DATA_PATH, parse_dates=["date"])
     df["rolling_7d_avg"] = df["sales"].rolling(7).mean().round(1)
     df["rolling_30d_avg"] = df["sales"].rolling(30).mean().round(1)
