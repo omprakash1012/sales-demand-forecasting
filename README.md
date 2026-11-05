@@ -1,6 +1,6 @@
 # Sales / Demand Forecasting
 
-![CI](https://github.com/omprakash1012/sales-demand-forecasting/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/omprakash1012/sales-demand-forecasting/actions/workflows/ci.yml/badge.svg)](https://github.com/omprakash1012/sales-demand-forecasting/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/omprakash1012/sales-demand-forecasting/blob/main/LICENSE)
 
 Short-term demand forecasting to help optimize inventory and staffing
 decisions, comparing Prophet and ARIMA against a naive baseline.
